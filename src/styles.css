@@ -1,0 +1,28 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+ 
+.App #all-image-container {
+  float: left;
+  width: 50%;
+  background-color: coral;
+}
+ 
+.App #all-image-container #image-album-column {
+  width: 25%;
+  float: left;
+  background-color: purple;
+}
+ 
+.App #all-image-container #image-album-column #one-image {
+  border: 1px solid blue;
+  padding: 20px 15px;
+  margin: 10px 7.5px;
+}
+ 
+.App #all-image-container #selected-image-display {
+  width: 70%;
+  float: right;
+  background-color: green;
+}
