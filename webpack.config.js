@@ -11,10 +11,10 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: ['style-loader', 'css-loader']
       },
-      // {
-      //   test: /\.(gif|png)$/,
-      //   use: ['file-loader']
-      // }
+      {
+        test: /\.(gif|png|jpg|jpeg)$/,
+        use: ['file-loader']
+      }
     ]
   },
   resolve: {
