@@ -12,19 +12,19 @@
  
 #app #all-image-container {
   float: left;
-  height: 20px;
+  /* height: 20px; */
   width: 50%;
-  background-color: coral;
+  /* background-color: coral; */
 }
  
 #app #all-image-container #image-album-column {
   width: 25%;
   float: left;
-  background-color: purple;
+  /* background-color: purple; */
 }
  
 #app #all-image-container #image-album-column #one-image {
-  border: 1px solid blue;
+  border: 1px solid black;
   /* padding: 20px 15px; */
   margin: 2px 7.5px;
   width: 50px;
@@ -34,7 +34,8 @@
 #app #all-image-container #selected-image-display {
   width: 70%;
   height: 500px;
+  border: 1px solid black;
   object-fit: cover;
   float: right;
-  background-color: green;
+  /* background-color: green; */
 }

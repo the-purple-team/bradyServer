@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class ProductDisplay extends React.Component {
   constructor(props) {
     super(props)
@@ -13,11 +14,7 @@ class ProductDisplay extends React.Component {
     }
   }
 
-  itemZoom() {
-
-  }
   onHover(tag, link) {
-    console.log(link, tag)
     this.setState({
       firstInstance: true,
       mainImage: {
@@ -25,7 +22,6 @@ class ProductDisplay extends React.Component {
         tag: tag
       }
     })
-    console.log(this.state)
   }
 
   render() {
@@ -33,30 +29,17 @@ class ProductDisplay extends React.Component {
       return (
         <div>Loading...</div>
       )
-    } else if (!this.state.firstInstance){
-      return (
-        <div id="all-image-container">
-          <div id="image-album-column">
-            {this.props.images.map((imageData, index) => {
-              return (
-                <img id="one-image" src={imageData.link} alt={imageData.productTag} key={index} onMouseOver={()=>this.onHover(imageData.productTag, imageData.link)}/>
-              )
-            })}
-          </div>
-          <img id="selected-image-display" src={this.props.images[0].link} alt={this.props.images[0].productTag} />
-        </div>
-      )
     } else {
       return (
         <div id="all-image-container">
           <div id="image-album-column">
             {this.props.images.map((imageData, index) => {
               return (
-                <img id="one-image" src={imageData.link} alt={imageData.productTag} key={index} onMouseOver={()=>this.onHover(imageData.productTag, imageData.link)}/>
+                <img id="one-image" src={imageData.link} alt={imageData.productTag} key={index} onMouseOver={() => this.onHover(imageData.productTag, imageData.link)} />
               )
             })}
           </div>
-          <img id="selected-image-display" src={this.state.mainImage.src} alt={this.state.mainImage.tag} />
+          <img id="selected-image-display" src={this.state.mainImage.src || this.props.images[0].link} alt={this.state.mainImage.tag} />
         </div>
       )
 
