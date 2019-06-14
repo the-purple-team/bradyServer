@@ -31,11 +31,16 @@
   height: 50px;
 }
  
-#app #all-image-container #selected-image-display {
+/* #app #all-image-container #selected-image-display {
   width: 70%;
   height: 500px;
   border: 1px solid black;
   object-fit: cover;
   float: right;
-  /* background-color: green; */
+  background-color: green; 
+} */
+
+.a-image-zoom-conatainer {
+  float: right;
+  width: 70% !important;
 }

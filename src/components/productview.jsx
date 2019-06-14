@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ReactImageMagnify from 'react-image-magnify';
 
 class ProductDisplay extends React.Component {
   constructor(props) {
@@ -39,7 +39,21 @@ class ProductDisplay extends React.Component {
               )
             })}
           </div>
-          <img id="selected-image-display" src={this.state.mainImage.src || this.props.images[0].link} alt={this.state.mainImage.tag} />
+
+          <ReactImageMagnify {...{
+            smallImage: {
+              src: this.state.mainImage.src || this.props.images[0].link,
+              width: 287,
+              height: 287,
+              isFluidWidth: false,
+            },
+            largeImage: {
+              src: this.state.mainImage.src || this.props.images[0].link,
+              width: 1500,
+              height: 1500
+            },
+            className: 'a-image-zoom-conatainer'
+          }} />
         </div>
       )
 

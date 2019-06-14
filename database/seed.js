@@ -35,6 +35,7 @@ const seed = () => {
             photoData.urls.full, 
             products);
         }
+        console.log(data);
       })
   }
   return 'Finished seeding';
