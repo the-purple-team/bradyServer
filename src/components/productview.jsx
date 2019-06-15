@@ -43,16 +43,18 @@ class ProductDisplay extends React.Component {
           <ReactImageMagnify {...{
             smallImage: {
               src: this.state.mainImage.src || this.props.images[0].link,
-              width: 287,
-              height: 287,
-              isFluidWidth: false,
+              // width: 286,
+              // height: 287,
+              isFluidWidth: true,
             },
             largeImage: {
               src: this.state.mainImage.src || this.props.images[0].link,
               width: 1500,
               height: 1500
             },
-            className: 'a-image-zoom-conatainer'
+            className: 'a-image-zoom-conatainer',
+            enlargedImageContainerClassName: 'large-image-container',
+            enlargedImageClassName: 'large-image'
           }} />
         </div>
       )

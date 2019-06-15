@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/data/grab', {
+    fetch('http://localhost:3000/data/grab', {
       method: 'GET',
       headers: {
         "Content-Type": "application/json"
@@ -39,7 +39,7 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    fetch('/data/grab', {
+    fetch('http://localhost:3000/data/grab', {
       method: 'GET',
       headers: {
         "Content-Type": "application/json"
