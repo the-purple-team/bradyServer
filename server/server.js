@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
 const dbConnection = require('./../database/db.js');
-const queryDB = require('./../database/db.js');
+// const queryDB = require('./../database/db.js');
 const apiKey = require('./../src/unsplashAPI/unsplash.js')
 const app = express();
 const port = process.env.port || 3005;
@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/products/:id', express.static(__dirname + '/../dist'));
 
 app.get('/product/:id', (req, res) => {
-  queryDB(req.params.id, (result) => {
+  dbConnection.queryDB(req.params.id, (result) => {
     res.send(result);
   });
 });

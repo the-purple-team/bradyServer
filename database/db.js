@@ -23,7 +23,7 @@ const insertIntoDB = (photoid, username, link, productTag, tagID) => {
 const queryDB = (id, cb) => {
   const sql = `SELECT link FROM photos WHERE tagID = ${id}`;
   connection.query(sql, (err, row) => {
-    console.log(row);
+    // console.log(row, 'data from queryDB');
     return err ? console.log(err) : cb(row);
   });
 }
