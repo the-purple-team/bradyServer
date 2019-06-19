@@ -9,16 +9,15 @@ class App extends React.Component {
     super(props)
     this.state = {
       imagesData: [],
-      keyword: 'camera',
+      keyword: 'Computer',
       value: ''
-
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/grab', {
+    fetch('http://localhost:3005/data/grab', {
       method: 'GET',
       headers: {
         "Content-Type": "application/json"
@@ -26,12 +25,14 @@ class App extends React.Component {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data[0].productTag);
         let imageSet = [];
         for (let i = 0; i < data.length; i++) {
           if (data[i].productTag === this.state.keyword) {
             imageSet.push(data[i])
           }
         }
+        console.log(imageSet);
         this.setState({
           imagesData: imageSet
         })
@@ -39,7 +40,7 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    fetch('http://localhost:3000/data/grab', {
+    fetch('http://localhost:3005/data/grab', {
       method: 'GET',
       headers: {
         "Content-Type": "application/json"

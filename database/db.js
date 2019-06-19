@@ -8,10 +8,9 @@ const connection = mysql.createConnection({
 
 connection.connect();
 
-const insertIntoDB = (id, username, link, productTag) => {
-  const sql = `INSERT INTO photos (id, link, username, productTag)
-               VALUES ('${id}', '${link}', '${username}', '${productTag}')`;
-
+const insertIntoDB = (photoid, username, link, productTag, tagID) => {
+  const sql = `INSERT INTO photos (photoid, link, username, productTag, tagID)
+               VALUES ('${photoid}', '${link}', '${username}', '${productTag}', '${tagID}')`;
   connection.query(sql, (err, row) => {
     if (err) {
       console.log(err);
@@ -21,7 +20,16 @@ const insertIntoDB = (id, username, link, productTag) => {
   })
 }
 
+const queryDB = (id, cb) => {
+  const sql = `SELECT link FROM photos WHERE tagID = ${id}`;
+  connection.query(sql, (err, row) => {
+    console.log(row);
+    return err ? console.log(err) : cb(row);
+  });
+}
+
 module.exports = {
   insertIntoDB,
-  connection
+  connection,
+  queryDB
 };

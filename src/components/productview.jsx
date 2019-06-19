@@ -43,8 +43,8 @@ class ProductDisplay extends React.Component {
           <ReactImageMagnify {...{
             smallImage: {
               src: this.state.mainImage.src || this.props.images[0].link,
-              // width: 286,
-              // height: 287,
+              // width: 280,
+              // height: 280,
               isFluidWidth: true,
             },
             largeImage: {
