@@ -5,25 +5,25 @@
   background-color: royalblue
 }
 
-#app {
+#photoapp {
   font-family: sans-serif;
   text-align: center;
 }
  
-#app #all-image-container {
+#photoapp #all-image-container {
   float: left;
   /* height: 20px; */
-  width: 50%;
+  width: 30%;
   /* background-color: coral; */
 }
  
-#app #all-image-container #image-album-column {
+#photoapp #all-image-container #image-album-column {
   width: 25%;
   float: left;
   /* background-color: purple; */
 }
  
-#app #all-image-container #image-album-column #one-image {
+#photoapp #all-image-container #image-album-column #one-image {
   border: 1px solid black;
   /* padding: 20px 15px; */
   margin: 2px 7.5px;
