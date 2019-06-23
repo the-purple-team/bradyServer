@@ -101,11 +101,11 @@ class App extends React.Component {
             <div
               style={{
                 backgroundColor: 'white',
-                marginLeft: '300px',
+                marginLeft: '20%',
                 padding: '5px',
                 borderRadius: '5px',
                 position: 'relative',
-                width: '40%',
+                width: '32%',
               }}
             >
               <SearchIcon
@@ -124,12 +124,6 @@ class App extends React.Component {
               {/* <label> */}
               {/* Search */}
               {/* <input type="text" /> */}
-              <div
-                style={{
-                  borderLeft: '1px solid rgb(151, 151, 151)',
-                  display: 'inline-block',
-                }}
-              />
               <InputBase
                 placeholder="Search…"
                 value={this.state.value}
@@ -139,7 +133,7 @@ class App extends React.Component {
                   color: 'black',
                   marginLeft: '5px',
                   display: 'inline-block',
-                  width: '88%',
+                  width: '17%',
                 }}
               />
             </div>
