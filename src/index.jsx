@@ -108,34 +108,36 @@ class App extends React.Component {
                 width: '32%',
               }}
             >
-              <SearchIcon
-                style={{
-                  color: 'black',
-                  height: '86%',
-                  position: 'absolute',
-                  pointerEvents: 'none',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '1.4em',
-                }}
-              />
-              {/* <form onSubmit={this.handleSubmit}> */}
-              {/* <label> */}
-              {/* Search */}
-              {/* <input type="text" /> */}
-              <InputBase
-                placeholder="Search…"
-                value={this.state.value}
-                onChange={this.handleChange}
-                inputProps={{ 'aria-label': 'Search' }}
-                style={{
-                  color: 'black',
-                  marginLeft: '5px',
-                  display: 'inline-block',
-                  width: '17%',
-                }}
-              />
+              <div style={{ width: '70%' }}>
+                <SearchIcon
+                  style={{
+                    color: 'black',
+                    height: '86%',
+                    position: 'absolute',
+                    pointerEvents: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '1.4em',
+                  }}
+                />
+                {/* <form onSubmit={this.handleSubmit}> */}
+                {/* <label> */}
+                {/* Search */}
+                {/* <input type="text" /> */}
+                <InputBase
+                  placeholder="Search…"
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                  inputProps={{ 'aria-label': 'Search' }}
+                  style={{
+                    color: 'black',
+                    marginLeft: '5px',
+                    display: 'inline-block',
+                    width: '72%',
+                  }}
+                />
+              </div>
             </div>
             {/* </label> */}
             {/* </form> */}
