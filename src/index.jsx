@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://localhost:3005/product${window.location.pathname.slice(9)}`, {
+    fetch(`http://localhost:3005/product${window.location.href.split('/')[4] || 1}`, {
       method: 'GET',
       headers: {
         "Content-Type": "application/json"
