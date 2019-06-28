@@ -87,8 +87,10 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <AppBar style={{ padding: '10px', backgroundColor: '#232f3e' }}>
-          <Toolbar>
+        <AppBar
+          style={{padding: '0 20px 0', backgroundColor: '#232f3e', height: '7%' }}
+        >
+          <Toolbar style={{ padding: '0px' }}>
             <IconButton
               edge="start"
               style={{ marginRight: '5px' }}
@@ -135,6 +137,7 @@ class App extends React.Component {
                     marginLeft: '5px',
                     display: 'inline-block',
                     width: '72%',
+                    border: 'none',
                   }}
                 />
               </div>
