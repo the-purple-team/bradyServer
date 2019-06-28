@@ -26,10 +26,10 @@ class ProductDisplay extends React.Component {
 
   render() {
     if (!this.props.images.length) {
-      return <div>Loading...</div>;
+      return <div style={{ paddingTop: '75px' }}>Loading...</div>;
     } else {
       return (
-        <div id="all-image-container">
+        <div id="all-image-container" style={{ paddingTop: '75px' }}>
           <div id="image-album-column">
             {this.props.images.map((imageData, index) => {
               return (
